@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import classes from "./search.module.css";
-import userEvent from "@testing-library/user-event";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Search() {
