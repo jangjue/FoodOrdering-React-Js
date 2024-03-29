@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { sample_foods } from "../data";
 
 const CartContext = createContext(null);
 const CART_KEY = "cart";
@@ -32,7 +31,7 @@ export default function CartProvider({ children }) {
   function getCartFromLocalStorage() {
     const storedCart = localStorage.getItem(CART_KEY);
     return storedCart ? JSON.parse(storedCart) : EMPTY_CART;
-    
+
     //error catching
     /*try {
       return storedCart ? JSON.parse(storedCart) : EMPTY_CART;
