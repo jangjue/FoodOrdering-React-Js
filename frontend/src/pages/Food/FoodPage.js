@@ -14,7 +14,7 @@ export default function FoodPage() {
   const navigate = useNavigate();
   const handleAddToCart = () => {
     addToCart(food);
-    navigate('/cart');
+    navigate("/cart");
   };
 
   useEffect(() => {
@@ -23,11 +23,13 @@ export default function FoodPage() {
 
   return (
     <>
-      {!food? (<NotFound message="Food Not Found!" linkText="Back To Homepage"/>) : (
+      {!food ? (
+        <NotFound message="Food Not Found!" linkText="Back To Homepage" />
+      ) : (
         <div className={classes.container}>
           <img
             className={classes.image}
-            src={`/foods/${food.imageUrl}`}
+            src={`${food.imageUrl}`}
             alt={food.name}
           />
           <div className={classes.details}>
