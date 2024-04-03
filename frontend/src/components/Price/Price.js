@@ -6,13 +6,17 @@ export default function Price({ price, locale, currency }) {
       style: "currency",
       currencyDisplay: "symbol",
       currency,
-    })
-      .format(price)
-      .replace("MYR", "RM");
+    }).format(price);
+  //.replace("MYR", "RM");
   return <span>{formatPrice()}</span>;
 }
 
+//Price.defaultProps = {
+//  locale: "en-MY",
+//  currency: "MYR",
+//};
+
 Price.defaultProps = {
-  locale: "en-US",
-  currency: "MYR",
+  locale: 'en-US',
+  currency: 'USD',
 };
