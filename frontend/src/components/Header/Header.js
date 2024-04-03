@@ -22,7 +22,7 @@ export default function Header() {
                 <Link to="/profile">{user.name}</Link>
                 <div className={classes.menu}>
                   <Link to="/profile">Profile</Link>
-                  <Link to="/order">Orders</Link>
+                  <Link to="/orders">Orders</Link>
                   <a onClick={logout}>Logout</a>
                 </div>
               </li>
